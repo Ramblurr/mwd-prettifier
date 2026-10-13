@@ -1,0 +1,28 @@
+/* Typography carries the hierarchy even on monochrome e-ink. */
+.mw-entry, .mw-reference { line-height: 1.35; text-align: left; }
+.entry { margin: 0.3em 0; }
+dfn { font-style: normal; font-weight: bold; font-size: 1.2em; color: #8b2030; }
+dfn.subhw, dfn.idiom { font-size: 1.05em; }
+sup, sub { font-size: 0.75em; }
+.phon, .pron { font-size: 0.95em; }
+.pos, .gram-info { font-style: italic; }
+.sense { margin: 0.35em 0 0 0.3em; }
+.subsense { margin: 0.2em 0 0 1em; }
+.sense-number { font-weight: bold; color: #234d38; }
+.example { color: #254f75; }
+.etymology { display: block; margin: 0.7em 0 0.3em; padding: 0.4em 0.6em; border-left: 2px solid #888; font-size: 0.9em; }
+.first-use { display: block; margin: 0.3em 0; font-size: 0.9em; }
+.entrysect { margin-top: 0.6em; }
+a { text-decoration: underline; }
+a.sc, small { font-size: 0.9em; }
+.bq, .thes { margin: 0.5em 0 0.5em 1em; }
+.ex, .last-ex { margin-left: 1em; }
+.art, .center, .caption { text-align: center; }
+.art { margin: 0.6em 0; }
+.caption { font-size: 0.9em; font-weight: bold; }
+img { max-width: 100%; height: auto; }
+img.middle { vertical-align: middle; }
+img.top { vertical-align: top; }
+table { max-width: 100%; border-collapse: collapse; }
+td, th { padding: 0.2em; text-align: left; }
+h1, h2, h3, h4 { margin: 0.7em 0 0.3em; }

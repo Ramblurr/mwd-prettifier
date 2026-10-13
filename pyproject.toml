@@ -1,0 +1,9 @@
+[project]
+name = "mwd-prettifier"
+version = "0.1.0"
+description = "MW Collegiate 12th-edition MOBI to readable KOReader StarDict"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+package = false
