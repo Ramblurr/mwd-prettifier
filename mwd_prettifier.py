@@ -375,7 +375,7 @@ def main():
             report = convert(args.input, args.output, args.compress)
         else:
             if not shutil.which("kindleunpack"):
-                raise ValueError("kindleunpack is missing; run inside nix-shell")
+                raise ValueError("kindleunpack is missing; run inside nix develop")
             with tempfile.TemporaryDirectory(prefix="mw-unpack-") as tmp:
                 log = args.output.parent / (args.output.name + "-unpack.log")
                 log.parent.mkdir(parents=True, exist_ok=True)

@@ -9,13 +9,13 @@ This edition contains the publisher's original XHTML in an embedded KindleGen so
 From this directory:
 
 ```bash
-nix-shell
+nix develop
 uv run mwd_prettifier.py \
   "data/input/Merriam-Webster Collegiate Dictionary 12thEd.mobi" \
   data/output/MW_Collegiate_12 --compress
 ```
 
-Or run `direnv allow` to enable the supplied `.envrc`. The shell provides Python, uv, a revision-pinned KindleUnpack command, and dictzip. The first Nix invocation needs network access; conversion itself is local. Nixpkgs comes from your `<nixpkgs>` channel and is not pinned.
+Or run `direnv allow` to enable the supplied `.envrc`. The flake devshell provides Python, uv, a revision-pinned KindleUnpack command, and dictzip. The first Nix invocation needs network access; conversion itself is local. Flake inputs, including nixpkgs, are pinned in `flake.lock`; update them with `nix flake update`.
 
 The output directory must not exist. Use a different name for a second build; the tool does not overwrite an existing dictionary. KindleUnpack's log is written next to the output directory. Temporary unpacked files are removed after conversion.
 
@@ -75,4 +75,11 @@ This is deliberately specific to the recovered MW12 source, not a general MOBI c
 
 `data/` is ignored by Git: source MOBI, publisher XHTML, generated dictionaries, logs, and previews stay local. Do not publish these copyrighted artifacts with the program.
 
-Our converter and verifier use only Python's standard library. The external decoder is [KindleUnpack](https://github.com/kevinhendricks/KindleUnpack), GPLv3, pinned in `shell.nix` at `bf0ca6ece4e73494625e7950be3e259b6260774c`. Its code is fetched separately, not copied into this project. `dictzip` is optional; no global pip installs are needed.
+Our converter and verifier use only Python's standard library. The external decoder is [KindleUnpack](https://github.com/kevinhendricks/KindleUnpack), GPLv3, pinned in `flake.nix` at `bf0ca6ece4e73494625e7950be3e259b6260774c`. Its code is fetched separately, not copied into this project. `dictzip` is optional; no global pip installs are needed.
+
+## License: European Union Public License 1.2
+
+Copyright © 2026 Casey Link
+
+Distributed under the [EUPL-1.2](https://spdx.org/licenses/EUPL-1.2.html).
+
